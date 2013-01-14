@@ -38,6 +38,7 @@ import org.obeonetwork.dsl.cinematic.toolkits.impl.ToolkitsPackageImpl;
 import org.obeonetwork.dsl.cinematic.view.ViewPackage;
 import org.obeonetwork.dsl.cinematic.view.impl.ViewPackageImpl;
 import org.obeonetwork.dsl.entity.EntityPackage;
+import org.obeonetwork.dsl.environment.EnvironmentPackage;
 import org.obeonetwork.dsl.soa.SoaPackage;
 
 /**
@@ -600,7 +601,7 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage {
 		// Obtain other dependent packages
 		CinematicPackage theCinematicPackage = (CinematicPackage)EPackage.Registry.INSTANCE.getEPackage(CinematicPackage.eNS_URI);
 		ViewPackage theViewPackage = (ViewPackage)EPackage.Registry.INSTANCE.getEPackage(ViewPackage.eNS_URI);
-		SoaPackage theSoaPackage = (SoaPackage)EPackage.Registry.INSTANCE.getEPackage(SoaPackage.eNS_URI);
+		EnvironmentPackage theEnvironmentPackage = (EnvironmentPackage)EPackage.Registry.INSTANCE.getEPackage(EnvironmentPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -661,7 +662,7 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage {
 
 		initEClass(flowActionEClass, FlowAction.class, "FlowAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFlowAction_Calls(), theViewPackage.getViewAction(), null, "calls", null, 0, -1, FlowAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFlowAction_Operations(), theSoaPackage.getOperation(), null, "operations", null, 0, -1, FlowAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFlowAction_Operations(), theEnvironmentPackage.getAction(), null, "operations", null, 0, -1, FlowAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(flowEventEClass, FlowEvent.class, "FlowEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFlowEvent_Binds(), theViewPackage.getViewEvent(), null, "binds", null, 0, -1, FlowEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

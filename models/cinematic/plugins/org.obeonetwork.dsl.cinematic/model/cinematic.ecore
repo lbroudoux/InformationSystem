@@ -116,7 +116,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="calls" upperBound="-1"
           eType="#//view/ViewAction"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="operations" upperBound="-1"
-          eType="ecore:EClass ../../org.obeonetwork.dsl.soa/model/soa.ecore#//Operation"/>
+          eType="ecore:EClass ../../org.obeonetwork.dsl.environment/model/environment.ecore#//Action"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="FlowEvent" eSuperTypes="#//Event">
       <eStructuralFeatures xsi:type="ecore:EReference" name="binds" upperBound="-1"
