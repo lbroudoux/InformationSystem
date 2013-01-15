@@ -16,7 +16,6 @@ import org.obeonetwork.dsl.cinematic.CinematicPackage;
 import org.obeonetwork.dsl.cinematic.components.PackagePackage_PropertiesEditionComponent;
 import org.obeonetwork.dsl.cinematic.components.PackagePropertiesEditionComponent;
 import org.obeonetwork.dsl.environment.components.MetadataCptPropertiesEditionComponent;
-import org.obeonetwork.dsl.cinematic.Package;
 
 /**
  * 

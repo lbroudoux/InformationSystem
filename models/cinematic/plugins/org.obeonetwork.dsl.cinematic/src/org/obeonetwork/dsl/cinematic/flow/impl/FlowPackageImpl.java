@@ -37,9 +37,7 @@ import org.obeonetwork.dsl.cinematic.toolkits.ToolkitsPackage;
 import org.obeonetwork.dsl.cinematic.toolkits.impl.ToolkitsPackageImpl;
 import org.obeonetwork.dsl.cinematic.view.ViewPackage;
 import org.obeonetwork.dsl.cinematic.view.impl.ViewPackageImpl;
-import org.obeonetwork.dsl.entity.EntityPackage;
 import org.obeonetwork.dsl.environment.EnvironmentPackage;
-import org.obeonetwork.dsl.soa.SoaPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -193,8 +191,7 @@ public class FlowPackageImpl extends EPackageImpl implements FlowPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		EntityPackage.eINSTANCE.eClass();
-		SoaPackage.eINSTANCE.eClass();
+		EnvironmentPackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		CinematicPackageImpl theCinematicPackage = (CinematicPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CinematicPackage.eNS_URI) instanceof CinematicPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CinematicPackage.eNS_URI) : CinematicPackage.eINSTANCE);
